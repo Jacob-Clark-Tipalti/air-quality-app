@@ -2,8 +2,19 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+## Prerequisites
+We'll need the following tools to get started:
+
+1. Install Expo Go on a physical device. You can download it from [here](https://expo.dev/client).
+
+2. Node.js (LTS). You can download it from [here](https://nodejs.org/en/).
+3. Install Android studio and Xcode for the emulator. 
+You can download Android studio from [here](https://developer.android.com/studio) and Xcode from [here](https://developer.apple.com/xcode/).
+In case you decide to run it on simulator to play around with the app.
+
 ## Get started
-To use the repository for your challenge submission, please fork the repository to your own Github account and then clone locally and begin development. Please DO NOT try to push branches or make pull requests to the original source template repository.
+To use the repository for your challenge submission, please fork the repository to your own Github account and then clone locally and begin development. 
+Please DO NOT try to push branches or make pull requests to the original source template repository.
 
 1. Install dependencies
 
@@ -16,7 +27,6 @@ To use the repository for your challenge submission, please fork the repository 
    ```bash
     npx expo start
    ```
-
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
