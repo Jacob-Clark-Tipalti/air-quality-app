@@ -3,26 +3,22 @@
  export function FocusedView({
   value,
   rating,
-  variable
+  name
  }: {
   value: number,
   rating: string,
-  variable: string
+  name: string
  }) {
   return (
-    <ScrollView contentContainerStyle={styles.view}>
+    <>
       <Text style={styles.value}>{value}</Text>
       <Text style={styles.rating}>{rating}</Text>
-      <Text style={styles.variable}>{variable}</Text>
-    </ScrollView>
+      <Text style={styles.name}>{name}</Text>
+    </>
   );
  }
 
  const styles = StyleSheet.create({
-  view: {
-    alignItems: 'center',
-    top: 150,
-  },
   value: {
     color: '#50CCAA',
     fontWeight: '900',
@@ -37,7 +33,7 @@
     lineHeight: 48,
     fontFamily: 'Inter',
   },
-  variable: {
+  name: {
     color: 'black',
     fontWeight: 400,
     fontSize: 20,
