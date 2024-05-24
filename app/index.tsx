@@ -2,10 +2,12 @@ import { FocusedView } from "@/components/FocusedView";
 import { Header } from "@/components/Header";
 import { VariableItem } from "@/components/VariableItem";
 import { Text, ScrollView, StyleSheet } from "react-native";
+import App from './App';
 
 export default function Index() {
   return (
     <>
+      <App />
       <Header location="City of London, England" />
       <ScrollView contentContainerStyle={styles.view}>
         <FocusedView value={20} rating="Fair" name="Air Quality" />
@@ -20,4 +22,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     top: 150,
   }
-})
+});
