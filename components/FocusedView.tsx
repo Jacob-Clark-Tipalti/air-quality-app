@@ -9,6 +9,15 @@
   rating: string,
   name: string
  }) {
+  let textColor;
+  if (rating === 'Fair') {
+    textColor = '#50CCAA';
+  } else if (rating === 'Medium') {
+    textColor = '#FDE68A';
+  } else {
+    textColor = '#DC2626';
+  }
+
   return (
     <>
       <Text style={styles.value}>{value}</Text>

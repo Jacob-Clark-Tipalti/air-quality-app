@@ -64,13 +64,14 @@ const styles = StyleSheet.create({
     width: 50,
     fontFamily: 'Lilita One',
     fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 25,
     lineHeight: 34,
+    textAlign: 'right'
   },
   textContainer: {
     width: '95%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-  }
+  },
 });
