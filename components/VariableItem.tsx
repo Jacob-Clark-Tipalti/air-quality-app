@@ -31,6 +31,7 @@ export function VariableItem({
 
 const styles = StyleSheet.create({
   container: {
+    margin:7,
     backgroundColor: '#FFFFFF',
     height: 59,
     borderRadius: 8,
@@ -40,8 +41,8 @@ const styles = StyleSheet.create({
       width: 0,
       height: 3,
     },
-    shadowRadius: 5,
-    shadowOpacity: 1.0,
+    shadowRadius: 4,
+    shadowOpacity: 0.3,
   },
   statusBar: {
     top: '80%',

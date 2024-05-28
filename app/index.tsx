@@ -27,10 +27,10 @@ export default function Index() {
         console.log('Permission to access location was denied');
         return;
     }
-    let location = await Location.getCurrentPositionAsync({});
-    setLocation(location.coords);
-    setLatitude(location.coords.latitude);
-    setLongitude(location.coords.longitude);
+    let locationData = await Location.getCurrentPositionAsync({});
+    setLocation(locationData.coords);
+    setLatitude(location.latitude);
+    setLongitude(location.longitude);
   }
 
   useEffect(() => {
@@ -48,7 +48,11 @@ export default function Index() {
       <ScrollView contentContainerStyle={styles.view}>
         <FocusedView value={airData?.current?.european_aqi} rating="Fair" name="Air Quality" />
         <VariableItem value={airData?.current?.nitrogen_dioxide} rating='Medium' name='NO2' />
-        {/* <Text>{latitude}</Text> */}
+        <VariableItem value={airData?.current?.pm10} rating='Medium' name='PM10' />
+        <VariableItem value={airData?.current?.pm2_5} rating='Medium' name='PM2.5' />
+        <VariableItem value={airData?.current?.carbon_monoxide} rating='Medium' name='CO' />
+        <VariableItem value={airData?.current?.sulphur_dioxide} rating='Medium' name='SO2' />
+        <VariableItem value={airData?.current?.ozone} rating='Medium' name='03' />
       </ScrollView>
     </>
   );
