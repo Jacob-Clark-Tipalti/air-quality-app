@@ -48,13 +48,12 @@ export default function Index() {
     <>
       <Header location="City of London, England" />
       <ScrollView contentContainerStyle={styles.view}>
-        <FocusedView value={airData?.current?.european_aqi} rating={airQualityRating(airData?.current?.european_aqi)} name="Air Quality" />
-        <VariableItem value={airData?.current?.nitrogen_dioxide} rating={airQualityRating(airData?.current?.nitrogen_dioxide)} name='NO2' />
-        <VariableItem value={airData?.current?.pm10} rating={airQualityRating(airData?.current?.pm10)} name='PM10' />
-        <VariableItem value={airData?.current?.pm2_5} rating={airQualityRating(airData?.current?.pm2_5)} name='PM2.5' />
-        <VariableItem value={airData?.current?.carbon_monoxide} rating={airQualityRating(airData?.current?.carbon_monoxide)} name='CO' />
-        <VariableItem value={airData?.current?.sulphur_dioxide} rating={airQualityRating(airData?.current?.sulphur_dioxide)} name='SO2' />
-        <VariableItem value={airData?.current?.ozone} rating={airQualityRating(airData?.current?.ozone)}name='03' />
+        <FocusedView value={airData?.current?.european_aqi} rating={airQualityRating("european_aqi", airData?.current?.european_aqi)} name="Air Quality" />
+        <VariableItem value={airData?.current?.nitrogen_dioxide} rating={airQualityRating("nitrogen_dioxide", airData?.current?.nitrogen_dioxide)} name='NO2' />
+        <VariableItem value={airData?.current?.pm10} rating={airQualityRating("pm10", airData?.current?.pm10)} name='PM10' />
+        <VariableItem value={airData?.current?.pm2_5} rating={airQualityRating("pm2_5", airData?.current?.pm2_5)} name='PM2.5' />
+        <VariableItem value={airData?.current?.sulphur_dioxide} rating={airQualityRating("sulphur_dioxide", airData?.current?.sulphur_dioxide)} name='SO2' />
+        <VariableItem value={airData?.current?.ozone} rating={airQualityRating("ozone", airData?.current?.ozone)}name='03' />
       </ScrollView>
     </>
   );

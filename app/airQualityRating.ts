@@ -1,12 +1,12 @@
 import {pollutantDictionary} from './pollutantDictionary';
 
-export const airQualityRating = (aqi: number): string =>{
-    const values = pollutantDictionary["european_aqi"];
+export const airQualityRating = (pollutant: string, value:number) =>{
+    const values = pollutantDictionary[pollutant];
     let result = "test";
 
-    if(Math.abs(aqi) < values[0]){
+    if(value < values[0]){
         return "Fair"
-    }else if(Math.abs(aqi) < values[1]){
+    }else if(value < values[1]){
         return "Medium"
     }else{
         result = "Poor"

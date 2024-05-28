@@ -13,7 +13,7 @@ export function VariableItem({
   if (rating === 'Fair') {
     statusBarColor = '#50CCAA';
   } else if (rating === 'Medium') {
-    statusBarColor = '#FDE68A';
+    statusBarColor = '#FDBA74';
   } else {
     statusBarColor = '#DC2626';
   }

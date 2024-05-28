@@ -1,4 +1,4 @@
- import { ScrollView, Text, StyleSheet } from 'react-native';
+ import { ScrollView, Text, StyleSheet, View } from 'react-native';
 
  export function FocusedView({
   value,
@@ -13,15 +13,15 @@
   if (rating === 'Fair') {
     textColor = '#50CCAA';
   } else if (rating === 'Medium') {
-    textColor = '#FDE68A';
+    textColor = '#FDBA74';
   } else {
     textColor = '#DC2626';
   }
 
   return (
     <>
-      <Text style={styles.value}>{value}</Text>
-      <Text style={styles.rating}>{rating}</Text>
+      <Text style={{...styles.value, color: textColor}}>{value}</Text>
+      <Text style={{...styles.rating, color: textColor}}>{rating}</Text>
       <Text style={styles.name}>{name}</Text>
     </>
   );
