@@ -39,5 +39,6 @@
     fontSize: 20,
     lineHeight: 24,
     fontFamily: 'Inter',
+    marginBottom: 40
   }
  });
