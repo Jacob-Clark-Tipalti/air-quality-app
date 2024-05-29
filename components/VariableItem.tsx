@@ -6,8 +6,8 @@ export function VariableItem({
   rating,
 }: {
   name: string,
-  value: number,
-  rating: string,
+  value?: number,
+  rating?: string,
 }) {
   let statusBarColor;
   if (rating === 'Fair') {

@@ -5,7 +5,7 @@
   rating,
   name
  }: {
-  value: number,
+  value: number | undefined,
   rating: string,
   name: string
  }) {
