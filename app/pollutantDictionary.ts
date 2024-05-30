@@ -4,7 +4,7 @@ export interface Dictionary{
 
 export const pollutantDictionary:Dictionary = {
     carbon_monoxide: [160, 180, 190],
-    european_aqi: [25, 30, 40],
+    european_aqi: [22, 25, 30],
     grass_pollen: [5, 10, 20],
     nitrogen_dioxide: [5, 20, 40],
     ozone: [11, 15, 20],

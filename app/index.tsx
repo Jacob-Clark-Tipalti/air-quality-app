@@ -30,11 +30,6 @@ export default function Index() {
     <>
       <Header location="City of London, England" />
 
-      {/* <Text onPress={() => {
-        router.push("/graph")}}> 
-        <Text>graphy</Text>
-      </Text> */}
-
       <ScrollView contentContainerStyle={styles.view}>
       <View style={styles.scrollStyle}>
         <FocusedView value={airData?.current?.european_aqi} rating={airQualityRating("european_aqi", airData?.current?.european_aqi)} name="Air Quality" />
