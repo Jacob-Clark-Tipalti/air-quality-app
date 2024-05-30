@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
         width: 45,
         height: 100,
         backgroundColor: '#50CCAA',
-        borderRadius:10,
+        borderTopRightRadius:10,
+        borderTopLeftRadius:10,
         margin:5,
     }
 });

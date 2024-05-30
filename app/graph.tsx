@@ -1,4 +1,4 @@
-import { Text, ScrollView, StyleSheet, Pressable, Button, View } from "react-native";
+import { Text, ScrollView, StyleSheet, Pressable, Button, View, Image} from "react-native";
 import React, { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { useNavigation, router } from "expo-router";
@@ -6,6 +6,7 @@ import { NativeStackNavigationOptions } from "@react-navigation/native-stack";
 import BarComponent from "./barComponent";
 import { fetchHourly, fetchLocation } from "./airService";
 import { getTwelveHourTime } from "./getTwelveHourTime";
+import {ReactComponent as leftArrow} from "./leftArrow.png";
 
 export default function Graph() {
     const [hourlyData, setHourlyData] = useState<number[] | string[] | undefined>();
@@ -29,16 +30,18 @@ export default function Graph() {
         getAllData();
       }, []);
 
-    // TODO: change value display to hours
   return (
     <>
-        <Header location="City of London, England" />
-        <Text onPress={() => {router.back()}}> 
-            <Text>indexy</Text>
-        </Text>
+        <View style={styles.header}>
+            <Header location="City of London, England" />
+            <Pressable onPress={() => {router.back()}}> 
+                <Image style={styles.icon} source={require('./leftArrow.png')} />
+            </Pressable>
+        </View>
+       
 
         <View style={styles.container}>
-            <ScrollView style={styles.app} horizontal={true}>
+            <ScrollView horizontal={true}>
                 {hourlyData?.map((item, index) => {
                     const hour = hours? hours[index]: "";
                     return (
@@ -50,7 +53,14 @@ export default function Graph() {
                 })}
             </ScrollView>
 
-
+            <View style={styles.textContainer}>
+                <Text style={styles.title}>
+                    UV Index
+                </Text>
+                <Text style={styles.text}>
+                The UV Index is a measure of the intensity of ultraviolet radiation from the sun at the Earth's surface. It provides important information to help people prevent overexposure to UV rays, which can lead to sunburns, premature aging of the skin, and an increased risk of skin cancer.
+                </Text>
+            </View>
         </View>
 
     </>
@@ -58,17 +68,38 @@ export default function Graph() {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        // flexDirection: 'column',
+    icon:{
+        width: 25,
+        height: 25,
+        marginTop:18,
+        marginLeft: 18
     },
-    app: {
-        // marginHorizontal: "auto",
-        // flexDirection: "row",
+    header:{
+        
+    },
+    container: {
+        top:100,
+        padding: 25
     },
     items:{
-        // flexDirection: 'column',
-        // alignContent: 'center',
         justifyContent: 'center',
         marginTop: 'auto',
+    },
+    title:{
+        color:'#4D4D4D',
+        fontSize: 20,
+        fontWeight: '700'
+    },
+    text:{
+        textAlignVertical: "center",
+        color:'#4D4D4D',
+        top:25
+    },
+    textContainer:{
+        top:35,
+        alignItems: 'center',
+        textAlignVertical: "center",
+        justifyContent: 'center',
+        textAlign: 'center'
     }
 });

@@ -30,10 +30,10 @@ export default function Index() {
     <>
       <Header location="City of London, England" />
 
-      <Text onPress={() => {
+      {/* <Text onPress={() => {
         router.push("/graph")}}> 
         <Text>graphy</Text>
-      </Text>
+      </Text> */}
 
       <ScrollView contentContainerStyle={styles.view}>
       <View style={styles.scrollStyle}>

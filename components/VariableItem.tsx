@@ -1,4 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Button, Pressable, StyleSheet, Text, View } from "react-native";
+import { router} from "expo-router";
 
 export function VariableItem({
   name,
@@ -19,17 +20,24 @@ export function VariableItem({
   }
 
   return (
-    <View style={styles.container}>
-      <View style={{...styles.statusBar, backgroundColor: statusBarColor}} />
-      <View style={styles.textContainer}>
-        <Text style={styles.name}>{name}</Text>
-        <Text style={styles.value}>{value}</Text>
+
+    <Pressable style={styles.pressable} onPress={() => {
+      router.push("/graph")}}> 
+      <View style={styles.container}>
+        <View style={{...styles.statusBar, backgroundColor: statusBarColor}} />
+        <View style={styles.textContainer}>
+          <Text style={styles.name}>{name}</Text>
+          <Text style={styles.value}>{value}</Text>
+        </View>
       </View>
-    </View>
+    </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
+  pressable:{
+
+  },
   container: {
     margin:7,
     backgroundColor: '#FFFFFF',
@@ -66,7 +74,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     lineHeight: 34,
-    textAlign: 'right'
+    textAlign: 'right',
   },
   textContainer: {
     width: '95%',
