@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     height: 59,
     borderRadius: 8,
-    width: '90%',
+    width: '95%',
     shadowColor: 'grey',
     shadowOffset: {
       width: 0,
@@ -60,15 +60,11 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 8,
   },
   name: {
-    left: 20,
-    height: 19,
     fontFamily: 'Inter',
     fontWeight: 400,
     fontSize: 16,
-    lineHeight: 19,
   },
   value: {
-    height: 34,
     width: 50,
     fontFamily: 'Lilita One',
     fontWeight: 'bold',
@@ -81,5 +77,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingRight: 10,
+    paddingLeft: 15
   },
 });
