@@ -6,7 +6,6 @@ import { NativeStackNavigationOptions } from "@react-navigation/native-stack";
 import BarComponent from "./barComponent";
 import { fetchHourly, fetchLocation } from "./airService";
 import { getTwelveHourTime } from "./getTwelveHourTime";
-import {ReactComponent as leftArrow} from "./leftArrow.png";
 
 export default function Graph() {
     const [hourlyData, setHourlyData] = useState<number[] | string[] | undefined>();
