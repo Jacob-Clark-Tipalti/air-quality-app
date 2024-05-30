@@ -5,14 +5,14 @@ export const getTwelveHourTime = (fullDate: string): string => {
 
     if (hourNumber > 12) {
         hourNumber -= 12;
-        hourString += 'pm';
+        hourString = 'pm';
     } else if (hourNumber === 12) {
-        hourString = '12pm';
+        hourString = 'pm';
     } else if (hourNumber === 0) {
-        hourString = '12am'
+        hourString = 'am'
     } else {
-        hourString += 'am';
+        hourString = 'am';
     }
 
-    return hourString.replace(/^0+/, "");
+    return hourNumber + hourString.replace(/^0+/, "");
 };
